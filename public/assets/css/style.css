@@ -1,3 +1,2 @@
-body {
-    color: #f76c6c;
-}
+@import '_variables.css';
+@import '_nav.css';

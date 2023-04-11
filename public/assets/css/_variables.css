@@ -1,0 +1,33 @@
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --font-size: 100%;
+    --primary: red;
+  }
+}
+
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: 106.25%;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --font-size: 112.5%;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --font-size: 118.75%;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --font-size: 125%;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --font-size: 131.25%;
+  }
+}
