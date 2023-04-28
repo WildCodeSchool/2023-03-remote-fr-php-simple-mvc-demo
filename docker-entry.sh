@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -e
 
 composer install \
@@ -11,8 +11,6 @@ composer install \
 
 php /var/www/migration.php
 
-mkdir /var/www/public/uploads
-chmod 775 /var/www/public/uploads
 
 php-fpm -D
 nginx -g 'daemon off;'
