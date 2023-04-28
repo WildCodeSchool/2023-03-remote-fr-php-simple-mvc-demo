@@ -14,7 +14,5 @@ composer install \
 
 php /var/www/migration.php
 
-
-
 php-fpm -D
 nginx -g 'daemon off;'
