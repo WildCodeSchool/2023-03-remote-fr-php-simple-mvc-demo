@@ -32,7 +32,7 @@ RUN mkdir -p /var/www/public/uploads/
 
 RUN adduser nginx www-data \
     && chgrp -R www-data /var/www/public/uploads/ \
-    && chmod -R 775 /var/www/public/uploads/
+    && chmod -R 777 /var/www/public/uploads/
 
 
 EXPOSE 80
