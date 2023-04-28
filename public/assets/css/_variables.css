@@ -1,7 +1,6 @@
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --font-size: 100%;
-    --primary: red;
   }
 }
 

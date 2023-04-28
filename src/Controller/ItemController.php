@@ -65,14 +65,22 @@ class ItemController extends AbstractController
             // clean $_POST data
             $item = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
+            $uploadDir = __DIR__ . '/../../public/uploads/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir);
+            }
 
-            // if validation is ok, insert and redirection
-            $itemManager = new ItemManager();
-            $id = $itemManager->insert($item);
+            $fileName = basename($_FILES['picture']['name']);
 
-            header('Location:/items/show?id=' . $id);
-            return null;
+            $uploadFile = $uploadDir . $fileName;
+            if (move_uploaded_file($_FILES['picture']['tmp_name'], $uploadFile)) {
+                $itemManager = new ItemManager();
+                $item['picture'] = $fileName;
+                $id = $itemManager->insert($item);
+
+                header('Location:/items/show?id=' . $id);
+                return null;
+            }
         }
 
         return $this->twig->render('Item/add.html.twig');

@@ -28,16 +28,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `item` (
   `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
+  `title` varchar(255) NOT NULL,
+  `picture` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `item`
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Hello'),
-(2, 'Doodads');
+-- INSERT INTO `item` (`id`, `title`) VALUES
+-- (1, 'Hello'),
+-- (2, 'Doodads');
 
 --
 -- Index pour les tables exportées

@@ -2,6 +2,9 @@
 
 {% block content %}
     <h1>Item {{ item.title }}</h1>
+    {% if item.picture %}
+        <img src="/uploads/{{ item.picture }}" alt="">
+    {% endif %}
     <p>{{ item.id }}. {{ item.title }}</p>
     <a href="/items/edit?id={{ item.id }}">Edit</a>
     <form action="/items/delete" method="POST">

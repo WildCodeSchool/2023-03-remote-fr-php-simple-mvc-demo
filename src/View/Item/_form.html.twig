@@ -1,8 +1,13 @@
 {# TODO : manage errors display #}
 
-<form method="post">
-	<input type="hidden" value="{{ item.id }}" name="id">
-	<label for="title">Tile</label>
-	<input type="text" value="{{ item.title }}" name="title" id="title">
-	<button>Submit</button>
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" value="{{ item.id }}" name="id">
+    <label for="title">Title
+        <input type="text" value="{{ item.title }}" name="title" id="title">
+    </label>
+    <label for="picture">
+        Picture
+        <input type="file" name="picture" id="picture">
+    </label>
+    <button>Submit</button>
 </form>

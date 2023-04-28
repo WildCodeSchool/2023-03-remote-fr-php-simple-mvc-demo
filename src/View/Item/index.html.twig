@@ -2,9 +2,18 @@
 
 {% block content %}
     <h1>Items</h1>
-    <ul>
-        {% for i in 0..10 %}
-            <li><a href="/items/show?id={{ item.id }}">{{ item.id }}. {{ item.title }}</a></li>
+    <ul class="grid">
+        {% for item in items %}
+            <li>
+                <picture>
+                    <a href="/items/show?id={{ item.id }}">
+                        <img src="/uploads/{{ item.picture }}" alt="{{ item.title }}">
+                    </a>
+                    <figcaption>
+                        {{ item.id }}. {{ item.title }}
+                    </figcaption>
+                </picture>
+            </li>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
